@@ -15,7 +15,7 @@
 
 
     <!-- Bootstrap Core CSS -->
-    <link href="./style/plugins/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./style/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="./style/css/shop-homepage.css" rel="stylesheet">
@@ -57,6 +57,7 @@
    ?>
     </div>
 </body>
+<script src="./style/js/bootstrap.min.js"></script>
 </html>
 
 

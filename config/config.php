@@ -1,7 +1,7 @@
 <?php
 class Config{
    private $host="localhost";
-    private $data="datntoan7";
+    private $data="cheroles";
     private $username="root";
     private $pass="";
     public $conn;

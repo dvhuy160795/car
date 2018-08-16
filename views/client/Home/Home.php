@@ -3,26 +3,24 @@
 ?>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container col-md-12">
         <div class="row">
             
             <div class="col-md-12" style="min-height:250px ">
 
                 <div class="row carousel-holder">
 
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   
                             <div class="carousel-inner">
                                 <div class="item active" style="background-image: url(./style/images/11.jpg); height:400px"> </div><!--/.item-->
-                <div class="item" style="background-image: url(./style/images/22.jpg); height:400px"></div><!--/.item-->
-                <div class="item" style="background-image: url(./style/images/33.jpg); height:400px"></div><!--/.item-->
-            </div>
+                                <div class="item" style="background-image: url(./style/images/22.jpg); height:400px"></div><!--/.item-->
+                                <div class="item" style="background-image: url(./style/images/33.jpg); height:400px"></div><!--/.item-->
+                            </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <?php include"topsp.php";?>
-                        </div>
+
                     </div>
  	
                 </div>
