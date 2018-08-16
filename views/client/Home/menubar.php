@@ -17,7 +17,7 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <a class="navbar-brand" href="?">
-                    <img style="width: 90px;margin-top: -10px;" src="<?php echo $_SERVER['REQUEST_URI']."/style/template/img/logo.png";  ?>">
+                    <img style="width: 90px;margin-top: -10px;" src="<?php echo LOCATION_URL."/style/template/img/logo.png";  ?>">
                 </a>
             </div>
             

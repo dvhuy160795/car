@@ -12,8 +12,8 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="?control=Notis">
-                        <img src=""
+                    <a class="navbar-brand" href="?">
+                        <img style="width: 90px;margin-top: -10px;" src="<?php echo LOCATION_URL."/style/template/img/logo.png";  ?>">
                     </a>
                 </div>
                 <!-- Top Menu Items -->

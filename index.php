@@ -1,5 +1,8 @@
 
 <?php
+defined('LOCATION_URL')
+    || define('LOCATION_URL', $_SERVER['REQUEST_URI']);
+
  session_start();
     require_once './config/config.php';
     $db= new Config();
