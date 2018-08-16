@@ -36,5 +36,12 @@
             $result=$conn->query("select * from $table where $condition") or die("not Check");
             return $result;
         }
+        public function InsertNew($table,$cols = [],$values = []){
+            global $conn;
+            $strCols = implode(",", $cols);
+            $strValues = implode(",", $values);
+            $result = $conn->query("insert into $table($cols)values($values)") or die(mysqli_error());
+            return $result;
+        }
     }
 ?>

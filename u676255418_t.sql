@@ -526,3 +526,15 @@ INSERT INTO `trogiup` (`id`, `noidung`, `ngaynhap`, `idnv`) VALUES
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+CREATE TABLE `attachment` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `attachment_name` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `attachment_hash_name` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `attachment_dir` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `attachment_extention` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `attachment_type` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `attachment_filter_code` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
