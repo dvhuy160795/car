@@ -11,77 +11,91 @@
                 <div class="row carousel-holder">
 
                     <div class="col-md-12">
-                        <div id="demo" class="carousel slide" data-ride="carousel">
+                        <div id="demo" class="carousel slide" data-ride="carousel" style="margin-top: 85px">
 
                           <!-- Indicators -->
                           <ul class="carousel-indicators">
                             <li data-target="#demo" data-slide-to="0" class="active"></li>
                             <li data-target="#demo" data-slide-to="1"></li>
                             <li data-target="#demo" data-slide-to="2"></li>
+                            <li data-target="#demo" data-slide-to="3"></li>
                           </ul>
 
                           <!-- The slideshow -->
                           <div class="carousel-inner">
                             <div class="carousel-item active">
-                              <img src="./style/images/11.jpg" alt="Los Angeles" width="1100" height="500">
+                                <img src="./style/template/img/banner/car1.png" alt="Los Angeles" style="width: 100%">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Car 1</h5>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item" >
+                                <img src="./style/template/img/banner/car2.png" alt="Chicago" style="width: 100%">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Car 2</h5>
+                                    <p>Description</p>
+                                </div>
                             </div>
                             <div class="carousel-item">
-                              <img src="./style/images/22.jpg" alt="Chicago" width="1100" height="500">
+                                <img src="./style/template/img/banner/car3.png" alt="New York" style="width: 100%">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Car 3</h5>
+                                    <p>Description</p>
+                                </div>
                             </div>
                             <div class="carousel-item">
-                              <img src="./style/images/33.jpg" alt="New York" width="1100" height="500">
+                                <img src="./style/template/img/banner/car4.png" alt="New York" style="width: 100%">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Car 4</h5>
+                                    <p>Description</p>
+                                </div>
                             </div>
                           </div>
-
-                          <!-- Left and right controls -->
-                          <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                          </a>
-                          <a class="carousel-control-next" href="#demo" data-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                          </a>
                         </div>
                     </div>
  	
                 </div>
             
         </div>
-            
-            <div style="font-size: 24px; margin-top:-1000px; height: 100px; color: red; border: none">
-            
-            <div class="col-md-12" id="menu" >
-                <ul>
-                    <li style=" margin-left: -45px; color: red; width:40px "><img style="width:100%" src="./style/upload/logo.png"></li>
-                    <li><a href="?">Trang chủ</a></li>
-                    <li><a href="?control=Home&action=Tintuc">Tin tức</a></li>
-                    <li><a href="?control=Home&action=Help">Trợ giúp</a></li>
-                    <li><a href="?control=Home&action=Contact">Liên hệ</a></li>
-                    <li><a href="?control=Home&action=About">Hệ thống cửa hàng</a></li>
-                </ul>
-                
-            </div>
-            
-            </div>
-        <div class="container">
-             <div class="col-md-2" style="height: auto; margin-top: 20px">
-                <?php include"menuleft.php";?>
-           
-                
-                
-            </div>
-            <div class="col-lg-10" >
-                    <?php include"./routs/routs.php";  ?>
-                </div>
-            
-            <div class="col-md-8">
+        </div>
+    </div>
+    <div class="container">
+                <?php // include"./routs/routs.php";  ?>
+        <div class="row">
+            <div class="col-md-3">
                 <fieldset>
+                    <img src="./style/template/img/new/new1.jpg" alt="Los Angeles" style="width: 100%" height="100">
                     <legend ><font style="color: red; font-weight: bold; font-size: 24px">Tin tức mới</font >(<?php echo date("d/m/y") ?>)</legend>
                     <?php include"partialnew.php";  ?>
                 </fieldset>
             </div>
-            <div class="col-md-4">
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F%25C4%2590%25E1%25BB%2593ng-H%25E1%25BB%2593-Phan-Th%25E1%25BB%258B-1907794406155494%2F&tabs=timeline&width=300&height=70&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="350" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            <div class="col-md-3">
+                <fieldset>
+                    <img src="./style/template/img/new/new2.jpg" alt="Los Angeles" style="width: 100%" height="100">
+                    <legend ><font style="color: red; font-weight: bold; font-size: 24px">Tin tức mới</font >(<?php echo date("d/m/y") ?>)</legend>
+                    <?php include"partialnew.php";  ?>
+                </fieldset>
             </div>
+            <div class="col-md-3">
+                <fieldset>
+                    <img src="./style/template/img/new/new3.jpg" alt="Los Angeles" style="width: 100%" height="100">
+                    <legend ><font style="color: red; font-weight: bold; font-size: 24px">Tin tức mới</font >(<?php echo date("d/m/y") ?>)</legend>
+                    <?php include"partialnew.php";  ?>
+                </fieldset>
+            </div>
+            <div class="col-md-3">
+                <fieldset>
+                    <img src="./style/template/img/new/new1.jpg" alt="Los Angeles" style="width: 100%" height="100">
+                    <legend ><font style="color: red; font-weight: bold; font-size: 24px">Tin tức mới</font >(<?php echo date("d/m/y") ?>)</legend>
+                    <?php include"partialnew.php";  ?>
+                </fieldset>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F%25C4%2590%25E1%25BB%2593ng-H%25E1%25BB%2593-Phan-Th%25E1%25BB%258B-1907794406155494%2F&tabs=timeline&width=300&height=70&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="350" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        </div>
     </div>
     
     <!-- /.container -->

@@ -5,6 +5,9 @@
 defined('LOCATION_URL')
     || define('LOCATION_URL', $_SERVER['REQUEST_URI']."..");
 
+defined('LOCATION_URL_PUBLIC')
+    || define('LOCATION_URL_PUBLIC', "http://".str_replace("/index.php", "", $_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']));
+
 session_start();
 //unset($_SESSION['login']);
 //echo $_SESSION['login'];

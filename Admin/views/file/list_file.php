@@ -45,16 +45,14 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Danh sách sản phẩm
+                            Danh sách file ảnh:
 <!--                            <small>Subheading</small>-->
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="../../admin/php/home.php">Home</a>
                             </li>
-                            <li class="active">
-                                <i class="fa fa-file"></i> Danh sách sản phẩm
-                            </li>
+                            
                         </ol>
                     </div>
                 </div>
@@ -62,39 +60,47 @@
                 <!-- /.row -->
                 <div class="row">
                     <div class="col-md-6">
-                        <a href="?control=mngSanpham&action=Add" class="btn btn-info">Thêm thức ăn</a>
+                        <a href="?control=mngFile&action=Add" class="btn btn-info">Thêm file vào thư viện</a>
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <div class="col-md-12">
-                        <table class="table table-bordered">
+                        <h3>Danh sách bài viết tin tức</h3>
+                        <table class="table table-bordered">    
                             <tr>
                                 <th>STT</th>
-                                <th>Tên món ăn </th>         
-                                <th>Giá tiền</th>
-                                <th>Xoá</th> 
+                                <th>Tên File</th>            
+                                <th>Đường dẫn</th>
+                                <th>Ảnh</th>        
                             </tr>
                             <?php $i = 1 ?>
-                            <?php foreach ($get as $row) 
-                                            
-                                         { ?>
+                            <?php foreach ($get as $row){?>
                             <tr>
                                 <a href="food_list.php"></a>
                                 <td><?php echo $i++; ?></td>
-                                <td><?php echo $row['sp_ten']; ?></td>
-                                <td><?php echo $row['sp_gia']; ?></td>
+                                <td>
+                                    <div style="width:100px; word-break: break-all;">
+                                        <?php echo $row['attachment_name']; ?>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div style="width:610px; word-break: break-all;">
+                                        <?php echo $row['attachment_dir'].$row['attachment_hash_name']; ?>
+                                    </div>
+                                </td>
+                                <td style="word-break: keep-all;">
+                                    <div style="word-break: break-all;">
+                                        <img src="<?php echo $row['attachment_dir'].$row['attachment_hash_name']; ?>" width="300">
+                                    </div>
+                                </td>
                                 <td>
                                     <div class="controls">
-                                        <a href="?control=mngSanpham&action=Edit&id=<?=$row['sp_id']?>" class="btn btn-info">Xem trước</a>
+                                        <a href="?control=mngNew&action=Edit&id=<?=$row['tt_id']?>" class="btn btn-info">Sửa</a>
                                     </div>
                                     <br>
                                     <div class="controls">
-                                        <a href="?control=mngSanpham&action=Edit&id=<?=$row['sp_id']?>" class="btn btn-info">Sửa</a>
-                                    </div>
-                                    <br>
-                                    <div class="controls">
-                                        <a href="?control=mngSanpham&action=Del&id=<?=$row['sp_id']?>" class="btn btn-danger delete">Xoá</a>
+                                        <a href="?control=mngNew&action=Del&id=<?=$row['tt_id']?>" class="btn btn-danger delete">Xoá</a>
                                     </div>                                
                                 </td>
                             </tr>

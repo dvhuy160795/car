@@ -14,6 +14,10 @@ switch ($control) {
             $control=new User();
             $control->{$action}();
             break;
+    case "Car":
+            $control=new Car();
+            $control->{$action}();
+            break;
 }
 
 ?>

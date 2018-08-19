@@ -43,7 +43,7 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="width: 400px">
                             <?php 
                             foreach ($reSults as $key => $row) { ?>
-                                <a class="dropdown-item" href="?control=Car&action=product&id=<?php echo $row['sp_id']; ?>">
+                                <a class="dropdown-item" href="?control=Product&action=product&id=<?php echo $row['sp_id']; ?>">
                                     <div class="row">
                                         <div class="col-md-5">
                                             <img style="width: 150px;" src="<?php echo LOCATION_URL_UPLOAD.$row['sp_img_path'];  ?>">

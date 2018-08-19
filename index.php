@@ -5,7 +5,8 @@ defined('LOCATION_URL')
 
 defined('LOCATION_URL_PUBLIC')
     || define('LOCATION_URL_PUBLIC', "http://".str_replace("/index.php", "", $_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']));
-
+defined('LOCATION_URL_UPLOAD')
+    || define('LOCATION_URL_UPLOAD', "http://".str_replace("/index.php", "/Admin/", $_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']));
  session_start();
     require_once './config/config.php';
     $db= new Config();

@@ -26,6 +26,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 </head>
 
 <body>
@@ -45,56 +46,50 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Danh sách sản phẩm
-<!--                            <small>Subheading</small>-->
+                            Danh sách file ảnh:
                         </h1>
-                        <ol class="breadcrumb">
-                            <li>
-                                <i class="fa fa-dashboard"></i>  <a href="../../admin/php/home.php">Home</a>
-                            </li>
-                            <li class="active">
-                                <i class="fa fa-file"></i> Danh sách sản phẩm
-                            </li>
-                        </ol>
                     </div>
                 </div>
                 
                 <!-- /.row -->
                 <div class="row">
                     <div class="col-md-6">
-                        <a href="?control=mngSanpham&action=Add" class="btn btn-info">Thêm thức ăn</a>
+                        <a href="?control=mngFile&action=Add" class="btn btn-info">Thêm file vào thư viện</a>
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <div class="col-md-12">
-                        <table class="table table-bordered">
+                        <table class="table table-bordered">    
                             <tr>
                                 <th>STT</th>
-                                <th>Tên món ăn </th>         
-                                <th>Giá tiền</th>
-                                <th>Xoá</th> 
+                                <th>Tên File</th>            
+                                <th>Đường dẫn</th>
+                                <th>Ảnh</th>        
                             </tr>
                             <?php $i = 1 ?>
-                            <?php foreach ($get as $row) 
-                                            
-                                         { ?>
+                            <?php foreach ($get as $row){?>
                             <tr>
                                 <a href="food_list.php"></a>
                                 <td><?php echo $i++; ?></td>
-                                <td><?php echo $row['sp_ten']; ?></td>
-                                <td><?php echo $row['sp_gia']; ?></td>
+                                <td>
+                                    <div style="width:100px; word-break: break-all;">
+                                        <?php echo $row['attachment_name']; ?>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div style="width:610px; word-break: break-all;">
+                                        <?php echo $row['attachment_dir'].$row['attachment_hash_name']; ?>
+                                    </div>
+                                </td>
+                                <td style="word-break: keep-all;">
+                                    <div style="word-break: break-all;">
+                                        <img id="img_link_<?php echo $row["id"]; ?>" src="<?php echo $row['attachment_dir'].$row['attachment_hash_name']; ?>" width="300">
+                                    </div>
+                                </td>
                                 <td>
                                     <div class="controls">
-                                        <a href="?control=mngSanpham&action=Edit&id=<?=$row['sp_id']?>" class="btn btn-info">Xem trước</a>
-                                    </div>
-                                    <br>
-                                    <div class="controls">
-                                        <a href="?control=mngSanpham&action=Edit&id=<?=$row['sp_id']?>" class="btn btn-info">Sửa</a>
-                                    </div>
-                                    <br>
-                                    <div class="controls">
-                                        <a href="?control=mngSanpham&action=Del&id=<?=$row['sp_id']?>" class="btn btn-danger delete">Xoá</a>
+                                        <input class="btn btn-info" type="button" value="Thêm vào danh sách ảnh"  onclick="product.addImgToProduct(this,<?php echo $row["id"]; ?>)"> 
                                     </div>                                
                                 </td>
                             </tr>
@@ -125,7 +120,33 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
-
+    <script>
+        var product = {
+            addImgToProduct : function (el,id) {
+                var html = "<div class='col-md-3'>";
+                    html += "<img src='"+ $('#img_link_' + id).attr('src') +"' style='width: 100%'>";
+                    html += "</div>";
+                $(el).parents("tr").addClass('hidden');
+                var valIdHidden = $('#sp_list_img_hidden').val();
+                if (valIdHidden == "") {
+                    $('#sp_list_img_hidden').val(id);
+                } else {
+                    var vallue = valIdHidden + "," + id;
+                    $('#sp_list_img_hidden').val(vallue);
+                }
+                $("#lib_img").append(html);
+            },
+            autoLoadEl : function (el, elDisplay){
+                var $avatarUser = $('#'+elDisplay);
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $avatarUser.attr('src', e.target.result);
+                    $avatarUser.removeClass("hidden");
+                }
+                reader.readAsDataURL(el.files[0]);
+            },
+        };
+    </script>
 </body>
 
 </html>

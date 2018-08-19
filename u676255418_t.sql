@@ -370,27 +370,27 @@ INSERT INTO `nhanvien` (`nv_id`, `nv_idbophan`, `nv_tennv`, `nv_tendangnhap`, `n
 --
 -- Structure de la table `sanpham`
 --
-
 CREATE TABLE IF NOT EXISTS `sanpham` (
-  `sp_id` int(100) NOT NULL AUTO_INCREMENT,
-  `sp_tensanpham` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `sp_gia` int(11) NOT NULL,
-  `sp_anh` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `sp_anhphu3` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `sp_anhphu2` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `sp_anhphu1` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `sp_mota` text COLLATE utf8_unicode_ci NOT NULL,
-  `sp_motangan` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `sp_giamgia` int(11) NOT NULL,
-  `sp_idloai` int(11) NOT NULL,
-  `sp_ngaynhap` date NOT NULL,
-  `sp_ngaysua` date DEFAULT '0000-00-00',
-  `sp_soluong` int(11) NOT NULL,
-  `sp_HSX` int(11) NOT NULL,
-  `sp_baohanh` int(11) NOT NULL,
-  `sp_view` int(11) NOT NULL,
+    `sp_id` int(100) NOT NULL AUTO_INCREMENT,
+    `sp_ten` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+    `sp_img_path` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+    `sp_gia` int(11) NOT NULL,
+    `sp_intro` text COLLATE utf8_unicode_ci NOT NULL,
+    `sp_design` text COLLATE utf8_unicode_ci NOT NULL,
+    `sp_technologi` text COLLATE utf8_unicode_ci NOT NULL,
+    `sp_action` text COLLATE utf8_unicode_ci NOT NULL,
+    `sp_protected` text COLLATE utf8_unicode_ci NOT NULL,
+    `sp_engine1` text COLLATE utf8_unicode_ci NOT NULL,
+    `sp_engine2` text COLLATE utf8_unicode_ci NOT NULL,
+    `sp_engine3` text COLLATE utf8_unicode_ci NOT NULL,
+    `sp_engine4` text COLLATE utf8_unicode_ci NOT NULL,
+    `sp_engine5` text COLLATE utf8_unicode_ci NOT NULL,
+    `sp_engine6` text COLLATE utf8_unicode_ci NOT NULL,
+    `sp_engine7` text COLLATE utf8_unicode_ci NOT NULL,
+    `sp_engine8` text COLLATE utf8_unicode_ci NOT NULL,
+    `sp_list_img` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`sp_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=43 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Contenu de la table `sanpham`
@@ -528,7 +528,7 @@ INSERT INTO `trogiup` (`id`, `noidung`, `ngaynhap`, `idnv`) VALUES
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
 CREATE TABLE `attachment` (
-  `id` int(10) UNSIGNED NOT NULL,
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `attachment_name` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL,
   `attachment_hash_name` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL,
   `attachment_dir` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -536,5 +536,6 @@ CREATE TABLE `attachment` (
   `attachment_type` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL,
   `attachment_filter_code` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

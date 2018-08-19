@@ -1,202 +1,285 @@
 
 <script src="https://cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script>
+<nav aria-label="breadcrumb" 
+    style="margin-top: -52px;
+    position: fixed;
+    z-index: 2000;
+    font-size: 18px;">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#intro">Giới thiệu</a></li>
+    <li class="breadcrumb-item"><a href="#design">Thiết kế</a></li>
+    <li class="breadcrumb-item"><a href="#technologi">Công nghệ</a></li>
+    <li class="breadcrumb-item"><a href="#action">Vận hành</a></li>
+    <li class="breadcrumb-item"><a href="#protected">An toàn</a></li>
+    <li class="breadcrumb-item"><a href="#engine">Tính năng & thông số</a></li>
+    <li class="breadcrumb-item"><a href="#sp_list_img">Thu viện hình ảnh</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Data</li>
+  </ol>
+</nav>
 <form class="form-horizontal" method="post" enctype="multipart/form-data">
-                                <fieldset>
-                                    <div id="legend">
-                                        <legend class="">Tạo sản phẩm</legend>
-                                    </div>
-                                    <!-- nhập tên sản phẩm-->
-                                        <label class="control-label">Nhập tên  </label>
-                                        <div class="controls">
-                                            <input type="text" id="unitName" name="abc" class="form-control input-lg">
-                                            <p class="help-block"></p>
-                                    <!-- nhập giá sản phẩm-->
-                                        <label class="control-label">Nhập giá  </label>
-                                        <div class="controls">
-                                            <input type="number" id="unitName" name="price" class="form-control input-lg">
-                                            <p class="help-block"></p>
-                                        </div>
-                                    <!-- nhập mô tả sản phẩm-->
-                                        <label class="control-label">Nhập mô tả </label>
-                                        <div class="controls">
-                                            <textarea type="text" rows="6" id="mota" name="desc" class="form-control input-lg"></textarea>
-                                            <script>
-                                                CKEDITOR.replace( 'desc' );
-                                                                                        </script></div>
-                                        <label class="control-label">Nhập mô tả ngắn về sản phẩm </label>
-                                        <div class="controls">
-                                            <textarea type="text" rows="6" id="mota" name="descshort" class="form-control input-lg"></textarea>
-                                            <script>
-                                                CKEDITOR.replace( 'descshort' );
-                                                                                        </script></div>
-                                    <!-- nhập thông số kỹ thuật sản phẩm-->
-                                            <label class="control-label">Nhập thông số kỹ thuật 1</label>
-                                            <div class="controls">
-                                            <textarea type="text" rows="6" id="mota" name="thongso1" class="form-control input-lg"></textarea>
-                                            <script>
-                                                CKEDITOR.replace( 'thongso1' );
-                                                                                        </script>
-                                            <p class="help-block"></p></div>
-                                            <label class="control-label">Nhập thông số kỹ thuật 2</label>
-                                            <div class="controls">
-                                            <textarea type="text" rows="6" id="mota" name="thongso2" class="form-control input-lg"></textarea>
-                                            <script>
-                                                CKEDITOR.replace( 'thongso2' );
-                                                                                        </script>
-                                            <p class="help-block"></p></div>
-                                            <label class="control-label">Nhập thông số kỹ thuật 3</label>
-                                            <div class="controls">
-                                            <textarea type="text" rows="6" id="mota" name="thongso3" class="form-control input-lg"></textarea>
-                                            <script>
-                                                CKEDITOR.replace( 'thongso3' );
-                                                                                        </script>
-                                            <p class="help-block"></p></div>
-                                            <label class="control-label">Nhập thông số kỹ thuật 4</label>
-                                            <div class="controls">
-                                            <textarea type="text" rows="6" id="mota" name="thongso4" class="form-control input-lg"></textarea>
-                                            <script>
-                                                CKEDITOR.replace( 'thongso4' );
-                                                                                        </script>
-                                            <p class="help-block"></p></div>
-                                            <label class="control-label">Nhập thông số kỹ thuật 5</label>
-                                            <div class="controls">
-                                            <textarea type="text" rows="6" id="mota" name="thongso5" class="form-control input-lg"></textarea>
-                                            <script>
-                                                CKEDITOR.replace( 'thongso5' );
-                                                                                        </script>
-                                            <p class="help-block"></p></div>
-                                    <!-- nhập giảm giá sản phẩm-->
-                                            <label class="control-label">Nhập giảm giá(%) </label>
-                                        <div class="controls">
-                                            <input type="number" id="unitName" name="giamgia" class="form-control input-lg">
-                                            <p class="help-block"></p>
-                                    <!-- nhập số lượng sản phẩm-->
-                                            <label class="control-label">Nhập số lượng(Chiếc) </label>
-                                        <div class="controls">
-                                            <input type="number" id="unitName" name="sl" class="form-control input-lg">
-                                            <p class="help-block"></p>
-                                        </div>
-                                        </div>
-                                       <?php foreach ($food as $row)?>
-                                        <div class="control-group">
-                                    <!-- nhập ảnh sản phẩm-->
-                                        <label class="control-label" >Ảnh</label>
-                                        <input type="file" id="fileupload" name="fileupload" onchange="uploadfile(this)"  >
-                                        <img style="width:30%"  id="image_upload" >
-                                    </div>
-                                    <script>
-                       function uploadfile(input) {
-                            if (input.files && input.files[0]) {
-                                var reader = new FileReader();
-
-                                reader.onload = function (e) {
-                                    $('#image_upload').attr('src', e.target.result);
-                                };
-
-                                reader.readAsDataURL(input.files[0]);
-                            }
-                        }
+<div style="height: 600px; overflow-y: auto; margin-top: 40px; border: thin solid #9f9f9f">
+        <fieldset>
+            <div id="legend">
+                <legend class="">Tạo sản phẩm</legend>
+            </div>
+            <!-- nhập tên sản phẩm-->
+                <label class="control-label">Nhập tên  </label>
+                <div class="controls">
+                    <input type="text" id="unitName" name="sp[sp_ten]" class="form-control input-lg">
+                    <p class="help-block"></p></div>
+                <label class="control-label">Nhập ảnh:  </label>
+                <div>
+                    <image src="" id="attachment_preview" class="hidden" width="300" />
+                </div>
+                <div>
+                    <input type="file" name="attachment" class="form-control" onchange="product.autoLoadEl(this,'attachment_preview');"/>
+                </div>
+            <!-- nhập giá sản phẩm-->
+                <label class="control-label">Nhập giá  </label>
+                <div class="controls">
+                    <input type="number" id="unitName" name="sp[sp_gia]" class="form-control input-lg">
+                    <p class="help-block"></p>
+                </div>
+            <!-- nhập mô tả sản phẩm-->
+            <div >
+                <label id="intro" class="control-label" >Nhập Giới thiệu</label>
+                <div class="controls">
+                    <textarea type="text" rows="6" id="text_intro" name="sp[sp_intro]" class="form-control input-lg"></textarea>
+                    <script>
+                        CKEDITOR.replace( 'text_intro' );
                     </script>
-                    <!--Ảnh phụ-->
-                    <table>
+                </div>
+            </div>
+            
+            <div >
+                <label id="design" class="control-label">Nhập Thiết kế </label>
+                <div class="controls">
+                    <textarea type="text" rows="6" id="text_design" name="sp[sp_design]" class="form-control input-lg"></textarea>
+                    <script>
+                        CKEDITOR.replace( 'text_design' );
+                    </script>
+                </div>
+            </div>
+            
+            <div >
+                <label id="technologi" class="control-label">Nhập Công Nghệ </label>
+                <div class="controls">
+                    <textarea type="text" rows="6" id="text_technologi" name="sp[sp_technologi]" class="form-control input-lg"></textarea>
+                    <script>
+                        CKEDITOR.replace( 'text_technologi' );
+                    </script>
+                </div>
+            </div> 
+            
+            <div >
+                <label  id="action" class="control-label">Nhập Vận Hành </label>
+                <div class="controls">
+                    <textarea type="text" rows="6" id="text_action" name="sp[sp_action]" class="form-control input-lg"></textarea>
+                    <script>
+                        CKEDITOR.replace( 'text_action' );
+                    </script>
+                </div>
+            </div>
+            
+            <div >
+                <label id="protected" class="control-label">Nhập An toàn </label>
+                <div class="controls">
+                    <textarea type="text" rows="6" id="text_protected" name="sp[sp_protected]" class="form-control input-lg"></textarea>
+                    <script>
+                        CKEDITOR.replace( 'text_protected' );
+                    </script>
+                </div>
+            </div>
+            <div >
+                <label id="engine" class="control-label">Tính năng và thông số kỹ thuật </label>
+                <table class="table-bordered" style="width: 100%; padding: 2px">
+                    <thead>
                         <tr>
-                            <td>
-                        <div class="control-group">
-                                        <label class="control-label" >Ảnh phụ 1</label>
-                                        <input type="file" id="fileupload" name="fileupload1" onchange="uploadfile1(this)"  >
-                                        <img style="width:30%"  id="image_upload1" >
-                                    </div>
-                                    <script>
-                       function uploadfile1(input) {
-                            if (input.files && input.files[0]) {
-                                var reader = new FileReader();
-
-                                reader.onload = function (e) {
-                                    $('#image_upload1').attr('src', e.target.result);
-                                };
-
-                                reader.readAsDataURL(input.files[0]);
-                            }
-                        }
-                    </script>
-                            </td>
-                            <td>
-                    <div class="control-group">
-                                        <label class="control-label" >Ảnh phụ 2</label>
-                                        <input type="file" id="fileupload" name="fileupload2" onchange="uploadfile2(this)"  >
-                                        <img style="width:30%"  id="image_upload2" >
-                                    </div>
-                                    <script>
-                       function uploadfile2(input) {
-                            if (input.files && input.files[0]) {
-                                var reader = new FileReader();
-
-                                reader.onload = function (e) {
-                                    $('#image_upload2').attr('src', e.target.result);
-                                };
-
-                                reader.readAsDataURL(input.files[0]);
-                            }
-                        }
-                    </script>
-                            </td>
-                            <td>
-                    <div class="control-group">
-                                        <label class="control-label" >Ảnh phụ 3</label>
-                                        <input type="file" id="fileupload" name="fileupload3" onchange="uploadfile3(this)"  >
-                                        <img style="width:30%"  id="image_upload3" >
-                                    </div>
-                                    <script>
-                       function uploadfile3(input) {
-                            if (input.files && input.files[0]) {
-                                var reader = new FileReader();
-
-                                reader.onload = function (e) {
-                                    $('#image_upload3').attr('src', e.target.result);
-                                };
-
-                                reader.readAsDataURL(input.files[0]);
-                            }
-                        }
-                    </script>
-                    </td>
+                            <th colspan="2">Động cơ và Truyền động</th>
                         </tr>
-                    </table>
-                                        <div class="control-group">
-                                            <div class="controls">
-                                                <label class="control-label">Hãng sản xuất:</label>
-                                                <select id="select_catalog" name="category" class="form-control">
-                                                    <?php foreach ($category as $cate) {?>
-                                                    <option value="<?=$cate['hsx_id']?>"><?=$cate['hsx_ten']?></option>
-                                                    <?php }?>
-                                                </select>
-                                            </div>                           
-                                        </div>
-                    <div class="control-group">
-                                            <div class="controls">
-                                                <label class="control-label">Loại sản phẩm:</label>
-                                                <select id="select_catalog" name="lsp" class="form-control">
-                                                    <?php foreach ($lsp as $cate) {?>
-                                                    <option value="<?=$cate['lsp_id']?>"><?=$cate['lsp_ten']?></option>
-                                                    <?php }?>
-                                                </select>
-                                            </div>                           
-                                        </div>
-                     <div class="control-group">
-                                            <div class="controls">
-                                                <label class="control-label">Bảo hành:</label>
-                                                <input type="number" id="unitName" name="bh" class="form-control input-lg">
-                                            </div>                           
-                                        </div>
-                                        <br>
-                                        <div class="controls">
-                                            <input type="submit" class="btn btn-success" name="submit"   value="Tạo sản phâm" >
-                                        </div>
-                                    </div>
-                                </fieldset>
-                            </form>
-<!-- jQuery -->
-            <script src="./style/js/jquery.js"></script>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <div class="controls">
+                                    <textarea type="text" rows="6" id="engine_1" name="sp[sp_engine1]" class="form-control input-lg"></textarea>
+                                    <script>
+                                        CKEDITOR.replace( 'engine_1' );
+                                    </script>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Kích thước & Khối lượng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <div class="controls">
+                                    <textarea type="text" rows="6" id="engine_2" name="sp[sp_engine2]" class="form-control input-lg"></textarea>
+                                    <script>
+                                        CKEDITOR.replace( 'engine_2' );
+                                    </script>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th colspan="2">An toàn</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <div class="controls">
+                                    <textarea type="text" rows="6" id="engine_3" name="sp[sp_engine3]" class="form-control input-lg"></textarea>
+                                    <script>
+                                        CKEDITOR.replace( 'engine_3' );
+                                    </script>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Ngoại thất</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <div class="controls">
+                                    <textarea type="text" rows="6" id="engine_4" name="sp[sp_engine4]" class="form-control input-lg"></textarea>
+                                    <script>
+                                        CKEDITOR.replace( 'engine_4' );
+                                    </script>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Nội thất</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <div class="controls">
+                                    <textarea type="text" rows="6" id="engine_5" name="sp[sp_engine5]" class="form-control input-lg"></textarea>
+                                    <script>
+                                        CKEDITOR.replace( 'engine_5' );
+                                    </script>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Tiện nghi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <div class="controls">
+                                    <textarea type="text" rows="6" id="engine_6" name="sp[sp_engine6]" class="form-control input-lg"></textarea>
+                                    <script>
+                                        CKEDITOR.replace( 'engine_6' );
+                                    </script>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Màu Ngoại thất</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <div class="controls">
+                                    <textarea type="text" rows="6" id="engine_7" name="sp[sp_engine7]" class="form-control input-lg"></textarea>
+                                    <script>
+                                        CKEDITOR.replace( 'engine_7' );
+                                    </script>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Giá bán lẻ khuyến nghị</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <div class="controls">
+                                    <textarea type="text" rows="6" id="engine_8" name="sp[sp_engine8]" class="form-control input-lg"></textarea>
+                                    <script>
+                                        CKEDITOR.replace( 'engine_8' );
+                                    </script>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Ngoại thất</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <div class="controls">
+                                    <textarea type="text" rows="6" id="engine_9" name="sp[sp_engine1]" class="form-control input-lg"></textarea>
+                                    <script>
+                                        CKEDITOR.replace( 'engine_9' );
+                                    </script>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div >
+                <label id="sp_list_img" class="control-label">Thư viện ảnh</label>
+                <div class="controls">
+                    <div class="row" id="lib_img">
+                        
+                    </div>
+                    <input type="hidden" name="sp[sp_list_img]" id="sp_list_img_hidden" value="">
+                </div>
+            </div>
+            </div>
+        </fieldset>
+</div>
+    <div style="height: 15px;"></div>
+    <div class="controls">
+        <input type="submit" class="btn btn-success" name="submit"   value="Tạo sản phâm" >
+    </div>
+</form>
+<div>
+    <?php 
+        $this->Url("masterModel");
+        $this->Url("pagination");
+        $model=new MasterModel();
+        $rfood=$model->GetNew("attachment");
+        $pagi=new Pagination();//lớp lấy hàm phân trang
+        $get=$pagi->PagiCus($rfood,"attachment","");
 
-            <!-- Bootstrap Core JavaScript -->
-            <script src="./style/js/bootstrap.min.js"></script>
+        require_once './views/sanpham/list_img.php';
+       
+        $pagi->Numpage($rfood,"mngFile","Show"); ?>
+</div>
+<!-- jQuery -->
+<script src="./style/js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="./style/js/bootstrap.min.js"></script>

@@ -149,6 +149,5 @@
          $model=new MasterModel();
          return $row=$model->Command("SELECT `sp_id`, `sp_tensanpham`, `sp_gia`, `sp_anh`, `sp_anhphu3`, `sp_anhphu2`, `sp_anhphu1`, `sp_mota`, `sp_motangan`, `sp_giamgia`, `sp_idloai`, `sp_ngaynhap`, `sp_ngaysua`, `sp_soluong`, `sp_HSX`, `sp_baohanh`, `sp_view` FROM `sanpham`  ORDER BY  sp_view DESC LIMIT 0,4");   
      }
-     
  }
 ?>

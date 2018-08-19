@@ -1,5 +1,5 @@
 <?php
-class mngSanpham{
+class mngFile{
     public function Url($url){
         require_once './models/'.$url.'.php';
     }
@@ -7,17 +7,18 @@ class mngSanpham{
         $this->Url("masterModel");
         $this->Url("pagination");
         $model=new MasterModel();
-        $rfood=$model->Get("sanpham");
+        $rfood=$model->Get("attachment");
         $pagi=new Pagination();//lớp lấy hàm phân trang
-        $get=$pagi->Pagi($rfood,NULL);
-        require_once './views/sanpham/list_sanpham.php';
+        $get=$pagi->PagiCus($rfood,"attachment","");
+
+        require_once './views/file/list_file.php';
        
-        $pagi->Numpage($rfood,"mngSanpham","Show");//hàm lấy danh sách số trang
+        $pagi->Numpage($rfood,"mngFile","Show");//hàm lấy danh sách số trang
     }
     function Edit() {
         $this->Url("masterModel");
         $model=new MasterModel();
-        $check=$model->Get("sanpham");
+        $check=$model->Get("attachment");
         foreach ($check as $arr)
             $arr1[$arr['sp_id']]=$arr;
         if(isset($_GET['id'])&& isset($arr1[$_GET['id']]) ){
@@ -103,17 +104,11 @@ class mngSanpham{
     function Add() {
         $this->Url("masterModel");
         $model=new MasterModel();
-        $category=$model->Get("hangsanxuat");
-        $lsp=$model->Get("loaisanpham");
-        $food=$model->Get("sanpham");
-        $i=1;
         if (isset($_POST['submit'])) {
-            $dataResult = $model->moveFileToPath($_FILES['attachment']);
-            $_POST['sp']['sp_img_path'] = $dataResult['attachment_dir'].$dataResult['attachment_hash_name'];
-            $model->InsertNew("sanpham",$_POST['sp']);
-            echo"<script>alert('Thêm sản phẩm thành công');location='?control=mngSanpham'</script>";
+            $model->processFile();
+            echo"<script>alert('Thêm file thành công');location='?control=mngFile'</script>";
         }
-        require_once './views/sanpham/add_sanpham.php';
+        require_once './views/file/add_file.php';
     }
     function Del() {
         $this->Url("masterModel");
@@ -121,7 +116,7 @@ class mngSanpham{
           $id=$_GET['id'];
         
         $model=new MasterModel();
-        $food=$model->Command("select *from sanpham where sp_id=$id");
+        $food=$model->Command("select *from attachment where sp_id=$id");
         $orderdetail=$model->Command("select *from chitietdonhang where sp_id=$id");
         foreach ($orderdetail as $detail)
         if($id == $detail['sp_id']){ 
