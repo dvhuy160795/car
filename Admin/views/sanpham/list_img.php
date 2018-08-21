@@ -79,12 +79,12 @@
                                 </td>
                                 <td>
                                     <div style="width:610px; word-break: break-all;">
-                                        <?php echo $row['attachment_dir'].$row['attachment_hash_name']; ?>
+                                        <?php echo LOCATION_URL_PUBLIC.$row['attachment_dir'].$row['attachment_hash_name']; ?>
                                     </div>
                                 </td>
                                 <td style="word-break: keep-all;">
                                     <div style="word-break: break-all;">
-                                        <img id="img_link_<?php echo $row["id"]; ?>" src="<?php echo $row['attachment_dir'].$row['attachment_hash_name']; ?>" width="300">
+                                        <img id="img_link_<?php echo $row["id"]; ?>" src="<?php echo LOCATION_URL_PUBLIC.$row['attachment_dir'].$row['attachment_hash_name']; ?>" width="300">
                                     </div>
                                 </td>
                                 <td>

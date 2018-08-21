@@ -11,7 +11,7 @@
                 <div class="row carousel-holder">
 
                     <div class="col-md-12">
-                        <div id="demo" class="carousel slide" data-ride="carousel" style="margin-top: 85px">
+                        <div id="demo" class="carousel slide" data-ride="carousel" style="margin-top: 120px">
 
                           <!-- Indicators -->
                           <ul class="carousel-indicators">
@@ -60,46 +60,47 @@
         </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container col-md-12" style="margin-top: 40px">
                 <?php // include"./routs/routs.php";  ?>
         <div class="row">
             <div class="col-md-3">
                 <fieldset>
-                    <img src="./style/template/img/new/new1.jpg" alt="Los Angeles" style="width: 100%" height="100">
-                    <legend ><font style="color: red; font-weight: bold; font-size: 24px">Tin tức mới</font >(<?php echo date("d/m/y") ?>)</legend>
+                    <img src="./style/template/img/new/new1.jpg" alt="Los Angeles" style="width: 100%">
                     <?php include"partialnew.php";  ?>
                 </fieldset>
             </div>
             <div class="col-md-3">
                 <fieldset>
-                    <img src="./style/template/img/new/new2.jpg" alt="Los Angeles" style="width: 100%" height="100">
-                    <legend ><font style="color: red; font-weight: bold; font-size: 24px">Tin tức mới</font >(<?php echo date("d/m/y") ?>)</legend>
+                    <img src="./style/template/img/new/new2.jpg" alt="Los Angeles" style="width: 100%">
                     <?php include"partialnew.php";  ?>
                 </fieldset>
             </div>
             <div class="col-md-3">
                 <fieldset>
-                    <img src="./style/template/img/new/new3.jpg" alt="Los Angeles" style="width: 100%" height="100">
-                    <legend ><font style="color: red; font-weight: bold; font-size: 24px">Tin tức mới</font >(<?php echo date("d/m/y") ?>)</legend>
+                    <img src="./style/template/img/new/new3.jpg" alt="Los Angeles" style="width: 100%">
                     <?php include"partialnew.php";  ?>
                 </fieldset>
             </div>
             <div class="col-md-3">
                 <fieldset>
-                    <img src="./style/template/img/new/new1.jpg" alt="Los Angeles" style="width: 100%" height="100">
-                    <legend ><font style="color: red; font-weight: bold; font-size: 24px">Tin tức mới</font >(<?php echo date("d/m/y") ?>)</legend>
+                    <img src="./style/template/img/new/new1.jpg" alt="Los Angeles" style="width: 100%">
                     <?php include"partialnew.php";  ?>
                 </fieldset>
             </div>
-        </div>
-        
-        <div class="col-md-4">
-            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F%25C4%2590%25E1%25BB%2593ng-H%25E1%25BB%2593-Phan-Th%25E1%25BB%258B-1907794406155494%2F&tabs=timeline&width=300&height=70&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="350" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
         </div>
     </div>
     
     <!-- /.container -->
-    
+    <div class="container" style="margin-top: 100px">
+        <div class="row">
+            <div class="col-md-6" style="text-align: center;">
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F%25C4%2590%25E1%25BB%2593ng-H%25E1%25BB%2593-Phan-Th%25E1%25BB%258B-1907794406155494%2F&tabs=timeline&width=300&height=70&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="350" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </div>
+            <div class="col-md-6" style="text-align: center;">
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F%25C4%2590%25E1%25BB%2593ng-H%25E1%25BB%2593-Phan-Th%25E1%25BB%258B-1907794406155494%2F&tabs=timeline&width=300&height=70&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="350" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </div>
+        </div>
+    </div>
     <div class="container">
 
         <hr>

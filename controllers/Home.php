@@ -132,7 +132,7 @@
      function PartiNew() {
           $this->Url('master');//hàm gọi file bên model
          $model=new MasterModel();
-         return $model->Command("select *from tintuc ORDER BY tt_id DESC limit 0,4");
+         return $model->Command("select *from tintuc ORDER BY tt_id DESC limit 0,1");
      }
      function Help() {
         

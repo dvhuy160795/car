@@ -3,28 +3,40 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/E:/laravel/car/controllers/User.php</file>
+            <file>file:/E:/laravel/car/routs/routs.php</file>
             <file>file:/E:/laravel/car/Admin/views/sanpham/list_sanpham.php</file>
             <file>file:/E:/laravel/car/views/client/Home/topsp.php</file>
             <file>file:/E:/laravel/car/views/client/Home/Home.php</file>
             <file>file:/E:/laravel/car/Admin/views/sanpham/list_img.php</file>
+            <file>file:/E:/laravel/car/controllers/Car.php</file>
             <file>file:/E:/laravel/car/index.php</file>
             <file>file:/E:/laravel/car/Admin/views/file/add_file.php</file>
             <file>file:/E:/laravel/car/config/config.php</file>
             <file>file:/E:/laravel/car/views/client/Home/footer.php</file>
             <file>file:/E:/laravel/car/Admin/index.php</file>
+            <file>file:/E:/laravel/car/views/client/Car/Car.php</file>
             <file>file:/E:/laravel/car/style/css/shop-homepage.css</file>
             <file>file:/E:/laravel/car/models/master.php</file>
             <file>file:/E:/laravel/car/Admin/controllers/mngMember.php</file>
             <file>file:/E:/laravel/car/Admin/models/masterModel.php</file>
+            <file>file:/E:/laravel/car/views/client/Car/footer.php</file>
+            <file>file:/E:/laravel/car/Admin/views/new/add_new.php</file>
             <file>file:/E:/laravel/car/views/client/Home/menubar.php</file>
             <file>file:/E:/laravel/car/Admin/views/sanpham/add_sanpham.php</file>
+            <file>file:/E:/laravel/car/models/Select_product.php</file>
             <file>file:/E:/laravel/car/Admin/views/nav.php</file>
             <file>file:/E:/laravel/car/Admin/views/layout.php</file>
+            <file>file:/E:/laravel/car/views/client/Car/Detail.php</file>
             <file>file:/E:/laravel/car/Admin/controllers/mngSanpham.php</file>
+            <file>file:/E:/laravel/car/Admin/views/sanpham/preview_sanpham.php</file>
+            <file>file:/E:/laravel/car/controllers/Home.php</file>
             <file>file:/E:/laravel/car/Admin/routs/routs.php</file>
             <file>file:/E:/laravel/car/Admin/views/file/list_file.php</file>
             <file>file:/E:/laravel/car/Admin/models/pagination.php</file>
+            <file>file:/E:/laravel/car/views/client/Car/menubar.php</file>
             <file>file:/E:/laravel/car/Admin/controllers/mngFile.php</file>
+            <file>file:/E:/laravel/car/views/client/Home/partialnew.php</file>
             <file>file:/E:/laravel/car/views/client/layout.php</file>
             <file>file:/E:/laravel/car/style/css/bootstrap.css</file>
             <file>file:/E:/laravel/car/u676255418_t.sql</file>

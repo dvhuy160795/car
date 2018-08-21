@@ -16,7 +16,7 @@
                                         <div class="controls">
                                             <textarea type="text" rows="6" id="mota" name="nd" class="form-control input-lg"></textarea>
                                             <script>
-                                                CKEDITOR.replace( 'desc' );
+                                                CKEDITOR.replace( 'mota' );
                                                                                         </script></div>
                                        
                                     
@@ -26,6 +26,19 @@
                                     </div>
                                 </fieldset>
                             </form>
+<div>
+    <?php 
+        $this->Url("masterModel");
+        $this->Url("pagination");
+        $model=new MasterModel();
+        $rfood=$model->GetNew("attachment");
+        $pagi=new Pagination();//lớp lấy hàm phân trang
+        $get=$pagi->PagiCus($rfood,"attachment","");
+
+        require_once './views/sanpham/list_img.php';
+       
+        $pagi->Numpage($rfood,"mngFile","Show"); ?>
+</div>
 <!-- jQuery -->
             <script src="./style/js/jquery.js"></script>
 
